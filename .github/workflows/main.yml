@@ -36,8 +36,8 @@ jobs:
           # Remote user
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           # Source directory, path relative to `$GITHUB_WORKSPACE` root, eg: `dist/`
-          SOURCE: ./
-          # Target directory
+          SOURCE: dist/
+          # Target directory, dir/ 将会新创建dir, dir则不会
           TARGET: /var/www/html/jinglecath_inventory/
           # 复制操作的参数。"-avzr --delete"意味部署时清空服务器目标目录下的文件
           ARGS: "-avzr --delete" 
