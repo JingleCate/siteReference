@@ -14,13 +14,13 @@ jobs:
 
     steps:
       # 检出 Git 仓库
-      - name: Check out git repository
-        uses: actions/checkout@v4.1.1
+      - name: Git clone
+        run: git clone https://github.com/JingleCate/siteReference
       # 切换分支
       - name: Switch to static branch.
         run: |
             echo "Current dir: $(pwd)"
-            git checkout gh-pages
+            git switch gh-pages
           
       - name: ssh deploy
       # You may pin to the exact commit or the version.
